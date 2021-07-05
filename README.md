@@ -1,3 +1,9 @@
+# GitHub的常见用法
+## 一、不同工作区的撤销更改
+### git add 添加代码到暂存区(index)以后的撤销
+- 命令：git checkout -- 路径下的文件名
+### git commit 已经将代码添加到本地仓库（local Repository）后的撤销
+- 命令：git reset -- 路径下的文件
 # GitHub的两个合作使用场景
 ## GitHub跨团队合作流程
 ### 跨团队合作场景
