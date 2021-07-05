@@ -76,7 +76,7 @@
 -   对于个人的 feature 提交，可以使用 git reset 回滚，然后 git push --force（最好不要使用这种方式，这种推送将会覆盖掉远程主机上更新的版本）提交。但是，对于团队协作，切记不要使用 git reset 的方式，而要使用更加安全的 git revert 的方式
 -   git 远程操作详解见：[git 远程操作](http://www.ruanyifeng.com/blog/2014/06/git_remote.html)
 
-## 使用 git cherry-pick 获取指定的提交
+## 七、使用 git cherry-pick 获取指定的提交
 
 ### cherry-pick 使用场景
 
@@ -87,3 +87,16 @@
 -   语法：git cherry-pick <commit id1> ，该次提交就会被合并到当前分支上
 -   可以进行多次转移提交的操作，比如：git cherry-pick <commit id1> git cherry-pick <commit id2>，执行过程中，如果出现冲突，手动解决后，git add,然后输入 git cherry-pick --continue,当然也可以是 git cherry-pick --abort 放弃合并，回到操作之前的样子，亦或 git cherry-pick --quit,发生冲突后退出 cherry-pick，但回不到之前的样子了
 -   也支持一次转移多次提交，git cherry-pick A..B 含义是：转移从 A 的下一个提交开始，到 B 的所有提交。注意；这是前开后闭的区间。如果想包含 A,命令写作：git cherry-pick A^..B
+-   参考文档：[git cherry-pick 的使用](https://www.ruanyifeng.com/blog/2020/04/git-cherry-pick.html)
+
+## 八、git rebase 的变基操作
+
+### 使用场景
+
+-   有些时候，我们需要将某个分支保存在另一个分支上，又不想使用 git merge 合并。可以使用变基来实现这一操作
+
+### git rebase 变基命令
+
+-   基本语法：假设有两个分支分别为 master、temp,如果需要把 temp 分支引用到 master 上。有两种处理方式：1.留在 master 分支，然后执行 git rebase master temp;2.切换到 temp 分支，输入命令：git rebase master 即可
+-   案例1：[变基的使用实例](https://git-scm.com/book/zh/v2/Git-%E5%88%86%E6%94%AF-%E5%8F%98%E5%9F%BA)
+-   你真的懂变基吗？案例2：[你真的东变基吗？](https://www.jianshu.com/p/6960811ac89c)
