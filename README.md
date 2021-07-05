@@ -69,3 +69,4 @@
 ### 使用场合
 - 对于个人的feature提交，可以使用git reset回滚，然后git push --force（最好不要使用这种方式，这种推送将会覆盖掉远程主机上更新的版本）提交。但是，对于团队协作，切记不要使用git reset的方式，而要使用更加安全的git revert的方式
 - git远程操作详解见：[git远程操作](http://www.ruanyifeng.com/blog/2014/06/git_remote.html)
+## 使用git cherry-pick获取指定的提交
