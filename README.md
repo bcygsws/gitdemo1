@@ -60,3 +60,12 @@
 -   删除某个缓存，使用git stash drop命令，git stash drop stash@{n}
 -   git stash clear 删除所有的缓存
 
+## 六、使用git revert回滚某次提交
+### 回退版本使用场景
+- 你的项目有两个版本要上线，两个版本都还伴随着之前遗留的bug修复。你将bug修复在了第一个版本的relese分支上。突然在发版前一天，测试告知，需要将bug修复放在第二个版本上。此时，第一个版本的集成分支上，应当包括了第一个版本的功能内容、bug修复内容、同事的其他提交。如果粗暴的使用git reset <commit提交>回退到某个版本，肯定行不通。而且，这种做法会很危险，会破坏掉一些提交记录，此时就可以使用git revert了
+- git revert操作后，不会修改之前的任何一次提交记录，而是自动新增了一个Revert开头的记录
+### 回滚多次提交
+- 命令：git revert <commit id1> <commit id2>,注意这是一个前开后闭的区间
+### 使用场合
+- 对于个人的feature提交，可以使用git reset回滚，然后git push --force（最好不要使用这种方式，这种推送将会覆盖掉远程主机上更新的版本）提交。但是，对于团队协作，切记不要使用git reset的方式，而要使用更加安全的git revert的方式
+- git远程操作详解见：[git远程操作](http://www.ruanyifeng.com/blog/2014/06/git_remote.html)
