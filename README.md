@@ -44,3 +44,19 @@
 -   全局配置指令的简写方式，可以提高工作效率
 -   如：git config --global alias.ci commit
 -   如：git config --global alias.ck checkout 等等
+
+## 五、使用 git stash 来暂存文件
+
+### 使用场景
+
+-   当某个程序员在 temp 分支上做开发时，出现一个突发情况。master 分支上的 bug 需要优先完成修复，而程序员手上的 temp 分支代码还没有编写完成，他又不想提交，可以使用 git stash 命令来实现，对 temp 分支文件的暂存(git stash/git stash save "说明文字")。待 master 上分支修复完成后，再切换到 temp 分支上，释放暂存的文件，继续之前的开发
+
+### 暂存文件和释放文件
+
+-   git stash
+-   git stash save "说明文字"
+-   应用某个存储-git stash apply stash@{n} ,n 从 0 开始取值，可以使用 git stash list 查看列表，然后确定 n 的值。应用这个文件，但是不会主动把该文件从暂存列表中清除，执行 git stash list 命令后可以验证。git stash apply 不跟任何内容，默认将使用 stash@{0}
+-   应用某个存储-git stash pop,同时会把该文件从暂存列表中清除
+-   删除某个缓存，使用git stash drop命令，git stash drop stash@{n}
+-   git stash clear 删除所有的缓存
+
