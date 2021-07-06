@@ -101,3 +101,5 @@
 -   案例 1：[变基的使用实例](https://git-scm.com/book/zh/v2/Git-%E5%88%86%E6%94%AF-%E5%8F%98%E5%9F%BA)
 -   你真的懂变基吗？案例 2：[你真的东变基吗？](https://www.jianshu.com/p/6960811ac89c)
 -   案例 3：[Git 由浅入深细说变基](http://www.uml.org.cn/pzgl/201704253.asp)
+## 九、git pull和git fetch的区别
+### git branch -a 命令查看fetch过来的代码分支
