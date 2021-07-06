@@ -101,5 +101,12 @@
 -   案例 1：[变基的使用实例](https://git-scm.com/book/zh/v2/Git-%E5%88%86%E6%94%AF-%E5%8F%98%E5%9F%BA)
 -   案例 2：[你真的懂变基吗？](https://www.jianshu.com/p/6960811ac89c)
 -   案例 3：[Git 由浅入深细说变基](http://www.uml.org.cn/pzgl/201704253.asp)
-## 九、git pull和git fetch的区别
-### git branch -a 命令查看fetch过来的代码分支
+
+## 九、git pull 和 git fetch 的区别
+
+# git branch -a 命令查看远程分支+本地分支
+
+-   git fetch 和 git pull 的区别在于，git fetch 只会将远程代码请求过来，而不会自动进行合并。git pull 却是将代码请求过来,而且
+    自动合并
+-   使用 git fetch 请求分支，然后合并。远程代码请求过来，成为远程分支 origin/temp
+-   合并方式：git merge origin/temp 或者 git rebase origin/temp
