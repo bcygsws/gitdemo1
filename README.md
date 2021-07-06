@@ -95,11 +95,11 @@
 
 -   有些时候，我们需要将某个分支保存在另一个分支上，又不想使用 git merge 合并。可以使用变基来实现这一操作
 
-### git rebase 变基的使用和案例分析
+### git rebase 变基使用和案例
 
 -   基本语法：假设有两个分支分别为 master、temp,如果需要把 temp 分支引用到 master 上。有两种处理方式：1.留在 master 分支，然后执行 git rebase master temp;2.切换到 temp 分支，输入命令：git rebase master 即可
 -   案例 1：[变基的使用实例](https://git-scm.com/book/zh/v2/Git-%E5%88%86%E6%94%AF-%E5%8F%98%E5%9F%BA)
--   案例 2：[你真的东变基吗？](https://www.jianshu.com/p/6960811ac89c)
+-   案例 2：[你真的懂变基吗？](https://www.jianshu.com/p/6960811ac89c)
 -   案例 3：[Git 由浅入深细说变基](http://www.uml.org.cn/pzgl/201704253.asp)
 ## 九、git pull和git fetch的区别
 ### git branch -a 命令查看fetch过来的代码分支
